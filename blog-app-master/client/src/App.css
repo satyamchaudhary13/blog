@@ -1,0 +1,151 @@
+/* Root container */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 3rem;
+  text-align: center;
+  background-color: #eef2f7; /* Light grayish background */
+  min-height: 100vh; /* Full page height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif; /* Clean, modern font */
+  color: #2d3436; /* Dark gray text for better readability */
+}
+
+/* Logo styling */
+.logo {
+  height: 7em;
+  padding: 2rem;
+  transition: filter 300ms ease-in-out, transform 300ms ease;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em rgba(52, 152, 219, 0.8)); /* Blue shadow */
+  transform: scale(1.1); /* Subtle zoom effect on hover */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.8)); /* React logo hover */
+}
+
+/* Logo spin animation */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Card styling */
+.card {
+  padding: 2.5em;
+  background-color: #ffffff; /* Clean white background */
+  border-radius: 1.25rem; /* Rounded corners */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  margin: 1.5em 0; /* Vertical margin between cards */
+  max-width: 90%;
+  transition: transform 300ms ease, box-shadow 300ms ease, background-color 300ms ease;
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Slight hover lift */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+  background-color: #f8f9fa; /* Slightly darker background on hover */
+}
+
+/* Button styling */
+button {
+  background-color: #1abc9c; /* Fresh teal color */
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 300ms, transform 300ms, box-shadow 300ms ease;
+}
+
+button:hover {
+  background-color: #16a085; /* Darker teal on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow on hover */
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #1abc9c; /* Focus shadow */
+}
+
+/* Link styling */
+.read-the-docs {
+  color: #7f8c8d; /* Light gray */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 300ms ease;
+}
+
+.read-the-docs:hover {
+  color: #1abc9c; /* Highlight link color on hover */
+}
+
+/* Section styling for a cleaner layout */
+section {
+  max-width: 1200px;
+  width: 100%;
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Input fields */
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #dcdfe1; /* Light border for input fields */
+  background-color: #fafbfc; /* Light background for inputs */
+  margin: 1rem 0;
+  font-size: 1rem;
+  color: #2d3436;
+  transition: border-color 200ms, background-color 200ms ease;
+}
+
+input:focus, textarea:focus {
+  border-color: #1abc9c; /* Teal border on focus */
+  background-color: #ffffff; /* White background on focus */
+  outline: none;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  #root {
+    padding: 2rem; /* Reduced padding for smaller screens */
+  }
+
+  .card {
+    padding: 1.8rem; /* Reduced padding for cards on smaller screens */
+  }
+
+  button {
+    width: 100%; /* Full-width buttons on mobile */
+  }
+
+  input, textarea {
+    font-size: 0.95rem; /* Slightly smaller text for inputs */
+  }
+}
+
+
